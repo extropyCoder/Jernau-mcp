@@ -1,8 +1,23 @@
 version: 1
 
-# Static hosting configuration - no build step
-artifacts:
-  baseDirectory: ./
+# Frontend definition (required by Amplify)
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build:static
 
+# Artifacts to deploy
+artifacts:
+  baseDirectory: public
+
+# Hosting configuration
 host:
   path: /
+  appRoot: public
+  hosting:
+    redirect: "/"
+    indexPage: "index.html"
