@@ -1,0 +1,13 @@
+# Amplify ignore patterns
+.git/
+.github/
+node_modules/
+.gitignore
+*.md
+package.json
+package-lock.json
+amplify.yml
+mcp-manifest.json
+
+# Only deploy static files
+public/
