@@ -1,24 +1,24 @@
 {
   "name": "jernau-mcp",
   "version": "1.0.0",
-  "description": "Jernau - A2A AgentCard & MCP Server",
-  "main": "index.js",
+  "description": "Jernau MCP Server - Model Context Protocol",
+  "main": "src/mcp-server.js",
   "scripts": {
-    "deploy": "amplify publish",
-    "build": "npm run build:static",
-    "build:static": "mkdir -p public && cp -r .well-known public && cp index.html public && cp README.md public && cp mcp-manifest.json public && cp package.json public && echo 'Static files copied to public/'"
+    "start": "node src/mcp-server.js",
+    "dev": "node --watch src/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/extropyCoder/Jernau-mcp.git"
   },
   "keywords": [
-    "a2a",
-    "agent2agent",
     "mcp",
     "model-context-protocol",
-    "erc-8004",
-    "ai-agent",
+    "a2a",
+    "agent2agent",
     "web3"
   ],
   "author": "Jernau <jernau@extropy.io>",
