@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "deploy": "amplify publish",
-    "start": "echo 'Server not implemented yet'"
+    "build": "npm run build:static",
+    "build:static": "mkdir -p public && cp -r .well-known public && cp index.html public && cp README.md public && cp mcp-manifest.json public && cp package.json public && echo 'Static files copied to public/'"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,5 @@
     "web3"
   ],
   "author": "Jernau <jernau@extropy.io>",
-  "license": "MIT",
-  "devDependencies": {
-    "@aws-amplify/cli": "^12.0.0"
-  }
+  "license": "MIT"
 }
