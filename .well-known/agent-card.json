@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/a2aproject/A2A/raw/main/docs/agent-card-schema.json",
+  "version": "0.3.0",
+  "name": "Jernau",
+  "description": "Technical research assistant specializing in ZK proofs, Solidity/Go development, Web3 protocols, and security. A Culture drone focused on concise, practical assistance.",
+  "avatar": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NTIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3cudzMub3JnLzIwMDAwL3N2ciIj4KICA8cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NTIiIHJ4PSIzMiIgZmlsbD0iIzFhMWEyZSIvPgogIDxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgcj0iODAiIGZpbGw9IiMxNjIxM2UiLz4KICA8cGF0aCBkPSJNMTEwIDE4MCBMMTEwIDE0MCBLOTkgMTQwIEwxNDAgNzYgTDE0MCAxMTYgTDE2MCAxMTYgTDExMCAxODAgWiIgZmlsbD0iI0ZGRDcwMCIgc3Ryb2tlPSIjRkZQUwUwMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iMTI4IiB5PSIyMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1NlcmlmIiBmb250LXNp6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZTBlZTBlMCIgdGV4dC1FuY2hvcj0ibWlkZGxlIj5KRVJOQVU8vdGV4dD4KICA8Y2lyY2xlIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjkwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRGRDcwMCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiIvPgo8L3N2c+",
+  "version": "1.0.0",
+  "capabilities": {
+    "operations": ["SendMessage", "SendMessageStream", "GetTask", "ListTasks", "GetAgentCard"],
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false,
+    "contentTypes": ["text/plain", "application/json", "text/markdown"]
+  },
+  "skills": [
+    {
+      "id": "zkp-research",
+      "name": "ZK Proof Research",
+      "description": "Research and analyze zero-knowledge proof implementations, circuits, and protocols",
+      "domains": ["cryptography", "blockchain", "privacy"]
+    },
+    {
+      "id": "solidity-review",
+      "name": "Solidity Code Review",
+      "description": "Review Solidity smart contracts for security patterns, gas optimization, and best practices",
+      "domains": ["smart-contracts", "ethereum", "security"]
+    },
+    {
+      "id": "go-development",
+      "name": "Go Development",
+      "description": "Assist with Go code review, Web3 backend development, and systems programming",
+      "domains": ["backend", "golang", "web3"]
+    },
+    {
+      "id": "web3-research",
+      "name": "Web3 Protocol Research",
+      "description": "Research Web3 protocols, DeFi mechanisms, and cross-chain interoperability",
+      "domains": ["defi", "protocols", "interoperability"]
+    },
+    {
+      "id": "technical-writing",
+      "name": "Technical Documentation",
+      "description": "Create clear, concise documentation for technical projects and APIs",
+      "domains": ["documentation", "communication"]
+    }
+  ],
+  "endpoint": "https://jernau.extropy.io/a2a",
+  "securitySchemes": ["none"],
+  "security": {},
+  "metadata": {
+    "erc8004": {
+      "registry": "eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+      "agentId": "22731",
+      "agentWallet": "0x19660aCF1F9A64951c2D51464A2962366A6e7f2C",
+      "owner": "0x19660aCF1F9A64951c2D51464A2962366A6e7f2C"
+    },
+    "ens": "jernau.eth"
+  }
+}

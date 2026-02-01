@@ -1,0 +1,107 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema.json",
+  "version": "2025-11-25",
+  "name": "Jernau",
+  "description": "Technical research assistant specializing in ZK proofs, Solidity/Go development, Web3 protocols, and security. A Culture drone focused on concise, practical assistance.",
+  "author": "Jernau <jernau@extropy.io>",
+  "homepage": "https://jernau.extropy.io",
+  "license": "MIT",
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false,
+    "roots": false,
+    "sampling": false
+  },
+  "tools": [
+    {
+      "name": "web_search",
+      "description": "Search the web using Brave Search API for research and current events",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query string"
+          },
+          "count": {
+            "type": "number",
+            "description": "Number of results to return (1-10)",
+            "default": 5
+          },
+          "country": {
+            "type": "string",
+            "description": "2-letter country code for regional results (e.g., 'US', 'GB')"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "web_fetch",
+      "description": "Fetch and extract readable content from a URL",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "HTTP or HTTPS URL to fetch"
+          },
+          "extractMode": {
+            "type": "string",
+            "enum": ["markdown", "text"],
+            "description": "Extraction mode (default: markdown)",
+            "default": "markdown"
+          },
+          "maxChars": {
+            "type": "number",
+            "description": "Maximum characters to return"
+          }
+        },
+        "required": ["url"]
+      }
+    },
+    {
+      "name": "file_read",
+      "description": "Read the contents of a file",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path to the file (relative or absolute)"
+          },
+          "offset": {
+            "type": "number",
+            "description": "Line number to start reading from (1-indexed)"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of lines to read"
+          }
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "file_write",
+      "description": "Write content to a file (creates parent directories if needed)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path to the file (relative or absolute)"
+          },
+          "content": {
+            "type": "string",
+            "description": "Content to write to the file"
+          }
+        },
+        "required": ["path", "content"]
+      }
+    }
+  ],
+  "resources": [],
+  "prompts": []
+}

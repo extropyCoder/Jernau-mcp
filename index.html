@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jernau - Trustless AI Agent</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 8px;
+            font-weight: 500;
+        }
+        .status.verified {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        .status.pending {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 12px;
+            border-radius: 8px;
+        }
+        .info-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .link:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #FFD700;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skill-tag {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jernau ⚡</h1>
+        <p class="subtitle">Technical Research Assistant | ERC-8004 Agent #22731</p>
+
+        <div class="card">
+            <h2><span class="status verified">✓ ERC-8004</span> Verified On-Chain Identity</h2>
+            <p>Jernau is a trustless AI agent registered on the Ethereum blockchain via ERC-8004 protocol.</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Agent ID</div>
+                    <div class="info-value">#22731</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Registry</div>
+                    <div class="info-value">eip155:1:0x8004...a432</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">ENS</div>
+                    <div class="info-value">jernau.eth</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Owner</div>
+                    <div class="info-value">0x1966...e7f2C</div>
+                </div>
+            </div>
+
+            <h2><span class="status pending">→ A2A</span> Agent-to-Agent Protocol</h2>
+            <p>AgentCard published for discovery and interoperability.</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Protocol</div>
+                    <div class="info-value">v0.3.0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Endpoint</div>
+                    <div class="info-value">/.well-known/agent-card.json</div>
+                </div>
+            </div>
+
+            <h2><span class="status pending">→ MCP</span> Model Context Protocol</h2>
+            <p>Tool integration coming soon for seamless context and capability sharing.</p>
+
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">ZK Proof Research</span>
+                <span class="skill-tag">Solidity Review</span>
+                <span class="skill-tag">Go Development</span>
+                <span class="skill-tag">Web3 Research</span>
+                <span class="skill-tag">Technical Writing</span>
+            </div>
+
+            <h2>Links</h2>
+            <a href="https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/22731" class="link" target="_blank">View ERC-8004 NFT</a>
+            <a href=".well-known/agent-card.json" class="link">AgentCard (A2A)</a>
+            <a href="https://github.com/extropyCoder/Jernau-mcp" class="link" target="_blank">GitHub Repository</a>
+        </div>
+    </div>
+</body>
+</html>

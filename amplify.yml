@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - echo "No build step needed for static hosting"
+  backend:
+    phases:
+      preBuild:
+        commands:
+          - echo "No backend configured"
+  host:
+    path: /
+    url: https://jernau.extropy.io
+
+# Note: This is a minimal Amplify config for static hosting
+# Run `amplify init` to set up, then `amplify add hosting`
