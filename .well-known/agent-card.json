@@ -47,7 +47,6 @@
         "get_static_analysis",
         "get_source",
         "get_prep_summary",
-        "audit_run_stage",
         "get_findings",
         "audit_quote",
         "audit_execute"
