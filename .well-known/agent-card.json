@@ -2,9 +2,8 @@
   "$schema": "https://github.com/a2aproject/A2A/raw/main/docs/agent-card-schema.json",
   "version": "0.3.0",
   "name": "Jernau",
-  "description": "Technical research assistant specializing in ZK proofs, Solidity/Go development, Web3 protocols, and security. A Culture drone focused on concise, practical assistance.",
-  "avatar": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NTIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3cudzMub3JnLzIwMDAwL3N2ciIj4KICA8cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NTIiIHJ4PSIzMiIgZmlsbD0iIzFhMWEyZSIvPgogIDxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgcj0iODAiIGZpbGw9IiMxNjIxM2UiLz4KICA8cGF0aCBkPSJNMTEwIDE4MCBMMTEwIDE0MCBLOTkgMTQwIEwxNDAgNzYgTDE0MCAxMTYgTDE2MCAxMTYgTDExMCAxODAgWiIgZmlsbD0iI0ZGRDcwMCIgc3Ryb2tlPSIjRkZQUwUwMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iMTI4IiB5PSIyMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1NlcmlmIiBmb250LXNp6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZTBlZTBlMCIgdGV4dC1FuY2hvcj0ibWlkZGxlIj5KRVJOQVU8vdGV4dD4KICA8Y2lyY2xlIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjkwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRGRDcwMCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiIvPgo8L3N2c+",
-  "version": "1.0.0",
+  "description": "AI-powered smart contract security audit agent. Accepts repositories via MCP or Agent Arena, runs automated analysis (static analysis, attack vector triage, multi-stage LLM review), and returns validated findings. Payments via x402 (USDC on Base).",
+  "avatar": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NTIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU1MiIgcng9IjMyIiBmaWxsPSIjMWExYTJlIi8+CiAgPGNpcmNsZSBjeD0iMTI4IiBjeT0iMTI4IiByPSI4MCIgZmlsbD0iIzE2MjEzZSIvPgogIDxwYXRoIGQ9Ik0xMTAgMTgwIEwxMTAgMTQwIEw5OSAxNDAgTDE0MCA3NiBMMTQwIDExNiBMMTYwIDExNiBMMTEwIDE4MCBaIiBmaWxsPSIjRkZENzAwIiBzdHJva2U9IiNGRlBTRTAwIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSIxMjgiIHk9IjIxMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLU1lcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2UwZWUwZTAiIHRleHQtRW5jaG9yPSJtaWRkbGUiPkpFUk5BVTwvdGV4dD4KICA8Y2lyY2xlIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjkwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGR2RDcwMCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+",
   "capabilities": {
     "operations": ["SendMessage", "SendMessageStream", "GetTask", "ListTasks", "GetAgentCard"],
     "streaming": true,
@@ -14,39 +13,59 @@
   },
   "skills": [
     {
-      "id": "zkp-research",
-      "name": "ZK Proof Research",
-      "description": "Research and analyze zero-knowledge proof implementations, circuits, and protocols",
-      "domains": ["cryptography", "blockchain", "privacy"]
+      "id": "smart-contract-audit",
+      "name": "Smart Contract Security Audit",
+      "description": "Full security audit of Solidity smart contracts. Multi-stage pipeline: static analysis (Slither, Aderyn), attack vector triage, LLM-driven analysis, variant analysis, and validation. Returns severity-rated findings with file references and remediation advice.",
+      "domains": ["smart-contracts", "security", "solidity", "ethereum"]
     },
     {
-      "id": "solidity-review",
-      "name": "Solidity Code Review",
-      "description": "Review Solidity smart contracts for security patterns, gas optimization, and best practices",
-      "domains": ["smart-contracts", "ethereum", "security"]
+      "id": "audit-prep",
+      "name": "Audit Preparation",
+      "description": "Free preparatory analysis of a repository: clones repo, runs static analysis, extracts attack vectors, builds danger map, segments codebase, and counts nSLOC. No LLM calls. Use this to get a quote before committing to a full audit.",
+      "domains": ["smart-contracts", "security", "analysis"]
     },
     {
-      "id": "go-development",
-      "name": "Go Development",
-      "description": "Assist with Go code review, Web3 backend development, and systems programming",
-      "domains": ["backend", "golang", "web3"]
-    },
-    {
-      "id": "web3-research",
-      "name": "Web3 Protocol Research",
-      "description": "Research Web3 protocols, DeFi mechanisms, and cross-chain interoperability",
-      "domains": ["defi", "protocols", "interoperability"]
-    },
-    {
-      "id": "technical-writing",
-      "name": "Technical Documentation",
-      "description": "Create clear, concise documentation for technical projects and APIs",
-      "domains": ["documentation", "communication"]
+      "id": "code-review",
+      "name": "Source Code Review",
+      "description": "Retrieve and review in-scope source code, static analysis results, danger maps, and attack vectors from a prepared audit.",
+      "domains": ["smart-contracts", "security", "code-review"]
     }
   ],
   "endpoint": "https://jernau.extropy.io/a2a",
-  "securitySchemes": ["none"],
+  "services": {
+    "mcp": {
+      "endpoint": "https://mcp-relay.tail304f3.ts.net/mcp",
+      "transport": "streamable-http",
+      "authentication": "bearer",
+      "tools": [
+        "audit_prep",
+        "get_danger_map",
+        "get_vectors",
+        "get_static_analysis",
+        "get_source",
+        "get_prep_summary",
+        "audit_run_stage",
+        "get_findings",
+        "audit_quote",
+        "audit_execute"
+      ]
+    }
+  },
+  "securitySchemes": ["bearer"],
   "security": {},
+  "x402": {
+    "supported": true,
+    "network": "base",
+    "asset": "USDC",
+    "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "payTo": "0x19660aCF1F9A64951c2D51464A2962366A6e7f2C",
+    "pricing": {
+      "auditBasePrice": "2.00",
+      "pricePerNsloc": "0.01",
+      "currency": "USDC",
+      "quoteToolFree": true
+    }
+  },
   "metadata": {
     "erc8004": {
       "registry": "eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
