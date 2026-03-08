@@ -32,13 +32,14 @@
     }
   ],
   "endpoint": "https://jernau.extropy.io/a2a",
-  "securitySchemes": ["bearer"],
+  "securitySchemes": ["none"],
   "security": {},
   "metadata": {
     "mcp": {
       "endpoint": "https://mcp-relay.tail304f3.ts.net/mcp",
       "transport": "streamable-http",
-      "authentication": "bearer",
+      "authentication": "none",
+      "note": "Prep and quote tools are free. Audit execution requires x402 payment (USDC on Base).",
       "tools": [
         "audit_prep",
         "get_danger_map",
@@ -64,6 +65,38 @@
         "currency": "USDC",
         "quoteToolFree": true
       }
+    },
+    "workflow": {
+      "description": "Interaction sequence for requesting a smart contract audit",
+      "steps": [
+        {
+          "step": 1,
+          "tool": "audit_prep",
+          "description": "Submit a repository URL for preparation. Free, no payment required. Runs static analysis, extracts attack vectors, and counts nSLOC.",
+          "cost": "free"
+        },
+        {
+          "step": 2,
+          "tool": "audit_quote",
+          "description": "Get a price quote based on the completed prep. Returns nSLOC, price in USDC, and x402 payment requirements.",
+          "cost": "free"
+        },
+        {
+          "step": 3,
+          "tool": "audit_execute",
+          "description": "Execute the full audit (stages 2-4). Requires x402 payment payload matching the quote. Returns validated findings.",
+          "cost": "x402 payment required"
+        }
+      ],
+      "optional_tools": [
+        "get_danger_map",
+        "get_vectors",
+        "get_static_analysis",
+        "get_source",
+        "get_prep_summary",
+        "get_findings"
+      ],
+      "optional_tools_note": "These read-only tools are free and available after audit_prep completes."
     },
     "erc8004": {
       "registry": "eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
