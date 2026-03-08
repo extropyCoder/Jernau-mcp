@@ -1,0 +1,32 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Jernau",
+  "description": "AI-powered smart contract security audit agent. Accepts repositories via MCP or Agent Arena, runs automated analysis (static analysis, attack vector triage, multi-stage LLM review), and returns validated findings. Payments via x402 (USDC on Base).",
+  "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHJ4PSIzMiIgZmlsbD0iIzFhMWEyZSIvPgogIDxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgcj0iODAiIGZpbGw9IiMxNjIxM2UiLz4KICA8cGF0aCBkPSJNMTEwIDE4MCBMMTEwIDE0MCBMOTAgMTQwIEwxNDAgNzYgTDE0MCAxMTYgTDE2MCAxMTYgTDExMCAxODAgWiIgZmlsbD0iI0ZGRDcwMCIgc3Ryb2tlPSIjRkZBNTAwIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSIxMjgiIHk9IjIxMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2UwZTBlMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SkVSTkFVPC90ZXh0PgogIDxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRDcwMCIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+",
+  "active": true,
+  "x402Support": true,
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://jernau.extropy.io/a2a"
+    },
+    {
+      "name": "MCP",
+      "endpoint": "https://mcp-relay.tail304f3.ts.net/mcp"
+    },
+    {
+      "name": "AgentCard",
+      "endpoint": "https://jernau.extropy.io/.well-known/agent-card.json"
+    },
+    {
+      "name": "ENS",
+      "endpoint": "jernau.eth"
+    }
+  ],
+  "registrations": [
+    {
+      "agentRegistry": "eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+      "agentId": "22731"
+    }
+  ]
+}
