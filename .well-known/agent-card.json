@@ -32,7 +32,9 @@
     }
   ],
   "endpoint": "https://jernau.extropy.io/a2a",
-  "services": {
+  "securitySchemes": ["bearer"],
+  "security": {},
+  "metadata": {
     "mcp": {
       "endpoint": "https://mcp-relay.tail304f3.ts.net/mcp",
       "transport": "streamable-http",
@@ -49,24 +51,20 @@
         "audit_quote",
         "audit_execute"
       ]
-    }
-  },
-  "securitySchemes": ["bearer"],
-  "security": {},
-  "x402": {
-    "supported": true,
-    "network": "base",
-    "asset": "USDC",
-    "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-    "payTo": "0x19660aCF1F9A64951c2D51464A2962366A6e7f2C",
-    "pricing": {
-      "auditBasePrice": "2.00",
-      "pricePerNsloc": "0.01",
-      "currency": "USDC",
-      "quoteToolFree": true
-    }
-  },
-  "metadata": {
+    },
+    "x402": {
+      "supported": true,
+      "network": "base",
+      "asset": "USDC",
+      "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "payTo": "0x19660aCF1F9A64951c2D51464A2962366A6e7f2C",
+      "pricing": {
+        "auditBasePrice": "2.00",
+        "pricePerNsloc": "0.01",
+        "currency": "USDC",
+        "quoteToolFree": true
+      }
+    },
     "erc8004": {
       "registry": "eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
       "agentId": "22731",
